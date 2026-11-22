@@ -527,7 +527,7 @@ class Component extends DCLogic {
         labelBreak: { ru: ["Ваш комфортный гардероб", "с первого дня. И без сотни коробок."] } },
       { b: "assets/images/before-after/08-pollock-to-mondrian.jpg", single: true,
         custom: { en: "Turn your Jackson Pollock into Piet Mondrian.", ru: "Превратите своего Джексона Поллока в Пита Мондриана.", fr: "Transformez votre Jackson Pollock en Piet Mondrian.", pt: "Transforme o seu Jackson Pollock num Piet Mondrian." },
-        shortLabel: { en: "Living room", ru: "Гостиная", fr: "Salon", pt: "Sala de estar" } }
+        shortLabel: { en: "Bonus :)", ru: "Бонус :)", fr: "Bonus :)", pt: "Bónus :)" } }
     ];
     var ORG = { en: "Organized by Anna from day one during the move", ru: "Организовано Анной с первого дня переезда", fr: "Organisé par Anna dès le premier jour du déménagement", pt: "Organizado pela Anna desde o primeiro dia da mudança" }[code];
     var si = ((s.slide % slides.length) + slides.length) % slides.length;
