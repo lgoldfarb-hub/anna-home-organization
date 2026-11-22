@@ -113,7 +113,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #33332F;outline-offset:3p
 .ba-nav{display:flex;gap:8px}
 .ba-arrow{width:48px;height:48px;border-radius:50%;border:1px solid #33332F;background:transparent;color:#33332F;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background-color .2s,color .2s}
 .ba-arrow:hover{background:#33332F;color:#F8F6F2}
-@media (max-width:560px){.ba-pair{gap:8px}.ba-lbl{bottom:8px;left:8px;font-size:10px;padding:5px 8px}.ba-dots{order:3;width:100%;justify-content:center}}
+@media (max-width:560px){.ba-pair{gap:8px}.ba-lbl{bottom:8px;left:8px;font-size:10px;padding:5px 8px}.ba-zone{flex:1 1 100%}.ba-dots{order:3;width:100%;justify-content:center}}
 .nerds{display:block;width:100%;height:auto;margin-top:22px;aspect-ratio:1 / 1;object-fit:cover}
 .ig-btn-wrap{margin:36px auto 0;display:flex;justify-content:center}
 .ig-btn{min-height:60px;padding:14px 32px;font-size:16px;line-height:1.35;white-space:normal;max-width:640px}
