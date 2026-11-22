@@ -56,6 +56,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #33332F;outline-offset:3p
 .hero-img{position:relative;aspect-ratio:9 / 10;overflow:hidden;background:#EAE4DA}
 .hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:48% 40%}
 .hero-h1{font-size:clamp(24px,4.4vw,40px);line-height:1.15;letter-spacing:-.01em;font-weight:500}
+.hero-h1.hero-h1-lg{font-size:clamp(28px,6.2vw,58px);line-height:1.08;letter-spacing:-.02em}
 .hero-h1 .ln{display:block}
 .hero-h1 em{font-style:italic;font-weight:400;color:#8E5F49}
 .hero-sub{margin-top:28px;color:#5E5D56;max-width:460px;font-size:clamp(16px,1.3vw,18px)}
