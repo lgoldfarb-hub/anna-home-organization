@@ -4,6 +4,33 @@ Running log of changes made to this project, session by session. Newest entries 
 
 ---
 
+## 2026-11-22 (continued, part 3)
+
+**Hero heading sizing**
+- Measured each language's true max safe font-size with headless Chrome again after layout changes shifted the baseline, then maximized: EN 85px, PT 64px → unchanged, FR 56px → 60px, RU 44px → 48px. Still verified per-language with real rendering (not estimates) before each push.
+
+**Mobile navigation / scrolling fixes**
+- Fixed `scroll-margin-top` mismatch (was 72px, header is 84px) that left the contact section clipped under the sticky header when a CTA scrolled to it.
+- CTA buttons ("Get a free consultation" etc.) now scroll straight to the contact `<form>` (`id="contact-form"`) instead of the top of the `#contact` section, since on mobile the quick-options list (Instagram/WhatsApp/Telegram/Email cards) stacks above the form and was what visitors landed on instead.
+
+**Before & after section polish**
+- Kept before/after nav arrows and dots in a fixed position regardless of caption length (previously `.ba-zone`/`.ba-nav`/`.ba-dots` shared one wrapped flex row, so longer captions pushed things around); dots are now absolutely centered within `.ba-bar`, with a `.ba-bar-single` modifier that matches the narrower (640px) single-image slide's width so the whole caption/dots/arrows bar sits under the photo instead of spanning the full container.
+- Clicking any before/after photo now opens it full-screen in a lightbox (dimmed background, close button, click-outside-to-close) — reused the existing video-modal pattern.
+- Swapped the order of the slide counter and zone name everywhere: "Zone name N / Total" → "N / Total Zone name".
+- Removed "Kids' room" duplicate slide ~~3~~ earlier; reworded the "ready"/move slide's caption several times (final RU: "Ваш комфортный гардероб" / "с первого дня. И без сотни коробок." on two lines via a new generic `labelBreak` per-slide field); gave the Pollock→Mondrian slide a short caption-bar label ("Bonus :)" in all 4 languages) distinct from its longer descriptive `alt` text.
+
+**Contact card copy buttons**
+- Added a copy-to-clipboard icon to the WhatsApp, Telegram and Email contact cards (previously email-only) — copies each card's displayed value, tooltip flips to "Copied!" for ~1.8s. Instagram has no copy button (no plain value worth copying).
+- Bottom-aligned the contact options list and the form (`align-items:end` on `.contact` grid) so both columns' bottoms line up instead of leaving a gap under the shorter options list.
+
+**Copy edits**
+- EN "About me" opening line, RU "Why" heading, "watch video" button, "extra services" line, steps 5/8/9, French "?" non-breaking space, before/after "already organized" caption, and the move-slide caption all got reworded this session (see earlier entries below for the first half).
+
+**Misc**
+- Investigated a "Powered by Netlify" badge appearing in local test screenshots — confirmed via `curl` that it does NOT appear in the real site's HTML; it was a test-harness artifact, not present on `annabubel.com`. Dashboard already shows the badge as hidden for this project.
+
+---
+
 ## 2026-11-22 (continued)
 
 **Deployment**
