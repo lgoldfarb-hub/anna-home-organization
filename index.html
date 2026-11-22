@@ -17,6 +17,19 @@
 <body>
 <div id="app"></div>
 
+<!-- Hidden static form so Netlify's build-time parser detects and registers this form.
+     The real, visible form is rendered from the <template> below and submitted via JS
+     fetch() to Netlify's form-handling endpoint — this one is never shown or submitted. -->
+<form name="contact" data-netlify="true" netlify-honeypot="website" hidden>
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <input type="text" name="location">
+  <select name="service"><option value="organization"></option><option value="moving"></option><option value="storage"></option><option value="unsure"></option></select>
+  <textarea name="message"></textarea>
+  <input type="text" name="website">
+</form>
+
 <!-- Page template. Edit copy in js/app.js (translations) and markup here. -->
 <template id="page">
 <div style="min-height: 100vh; background: #F8F6F2">

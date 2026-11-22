@@ -15,8 +15,7 @@ class Component extends DCLogic {
     return {
       whatsapp: "351911933417", whatsappDisplay: "+351 911 933 417", /* digits with country code, e.g. "351912345678" — the "Write me" buttons open WhatsApp */
       email: "anna.b.goldfarb@gmail.com", /* used for the "Write me" buttons if no WhatsApp number is set */
-      instagram: "https://www.instagram.com/anna_bubel/", instagramHandle: "@anna_bubel", telegram: "annagoldfarb", telegramHandle: "@annagoldfarb", /* full profile URL — turns the Testimonials line into a link */
-      formEndpoint: "https://formsubmit.co/ajax/anna.b.goldfarb@gmail.com" /* FormSubmit: delivers each inquiry to this inbox (first submission sends Anna an activation email) */
+      instagram: "https://www.instagram.com/anna_bubel/", instagramHandle: "@anna_bubel", telegram: "annagoldfarb", telegramHandle: "@annagoldfarb" /* full profile URL — turns the Testimonials line into a link */
     };
   }
 
@@ -479,17 +478,20 @@ class Component extends DCLogic {
     ];
     var body = rows.map(function (r) { return r[0] + ": " + r[1]; }).join("\n");
     this._mailto = "mailto:" + cfg.email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    var payload = { _subject: subject, _template: "table", _captcha: "false", _replyto: f.email.trim() };
-    rows.forEach(function (r) { payload[r[0]] = r[1]; });
+    var payload = {
+      "form-name": "contact", name: f.name.trim(), email: f.email.trim(), phone: f.phone.trim(),
+      location: f.loc.trim(), service: f.service, message: f.msg.trim(), website: f.hp,
+      subject: subject
+    };
+    var encoded = Object.keys(payload).map(function (k) { return encodeURIComponent(k) + "=" + encodeURIComponent(payload[k]); }).join("&");
     var self = this;
     this.setState({ errors: {}, status: "sending" });
-    fetch(cfg.formEndpoint, {
+    fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(payload)
-    }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { return { ok: r.ok, d: d }; }); })
-      .then(function (res) {
-        if (!res.ok || String(res.d.success) !== "true") throw new Error("bad");
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encoded
+    }).then(function (r) {
+        if (!r.ok) throw new Error("bad");
         self.setState({ status: "sent", form: { name: "", email: "", phone: "", loc: "", service: "", msg: "", consent: false, hp: "" } });
       })
       .catch(function () { self.setState({ status: "fallback" }); });

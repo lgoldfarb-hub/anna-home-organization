@@ -38,12 +38,11 @@ python3 -m http.server 8000
 
 ## Contact form
 
-The form posts to [FormSubmit](https://formsubmit.co) and is delivered to `anna.b.goldfarb@gmail.com` with the subject
-`New home org request: {Full Name} / {Service needed}`.
+The form posts to **Netlify Forms**. A hidden static copy of the form (same `name="contact"` and field names) sits right after `<body>` in `index.html` purely so Netlify's build-time parser detects and registers it — the real, visible form is rendered from the `<template>` and its submissions are sent via `fetch("/", …)` in `js/app.js`'s `submit()` method.
 
-- The **first real submission** sends an activation email to that inbox — Anna must click **Activate** (check spam).
-- If the request fails, the visitor gets a fallback link that opens a pre-filled email.
-- Alternative: switch to **Netlify Forms** (add `data-netlify="true"` handling) if you prefer submissions in the Netlify dashboard.
+- Submissions show up under **Forms** in the Netlify dashboard for this site, and can optionally be forwarded by email via Netlify's form notification settings.
+- A `website` field acts as a honeypot (`netlify-honeypot="website"`) to filter bot spam.
+- If the request fails, the visitor gets a fallback link that opens a pre-filled email to `anna.b.goldfarb@gmail.com`.
 
 ## Deploy to Netlify
 
