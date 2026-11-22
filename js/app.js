@@ -574,7 +574,7 @@ class Component extends DCLogic {
       fr: ["Le formulaire n'a pas pu être envoyé automatiquement.", "L'envoyer par e-mail →"],
       pt: ["Não foi possível enviar o formulário automaticamente.", "Enviar por e-mail →"] }[code] || [];
     return {
-      t: t, reqTip: reqTip, langs: langs, whyTitleBr: code !== "ru" && code !== "fr",
+      t: t, reqTip: reqTip, langs: langs, whyTitleBr: code === "en",
       ba: { title: BA[0], before: BA[1], after: BA[2], prev: BA[3], next: BA[4] }, cur: cur, baDots: baDots, baTotal: slides.length,
       baPrev: function () { self.setState({ slide: si - 1 }); }, baNext: function () { self.setState({ slide: si + 1 }); },
       langOpen: s.langOpen, langExp: s.langOpen ? "true" : "false",
