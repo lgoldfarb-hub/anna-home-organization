@@ -3,7 +3,9 @@
 class Component extends DCLogic {
   constructor(props) {
     super(props);
-    this.state = { slide: 0, lang: null, menuOpen: false, langOpen: false, videoOpen: false, compact: false, tab: "org",
+    var savedLang = null;
+    try { savedLang = localStorage.getItem("anna_lang"); } catch (e) {}
+    this.state = { slide: 0, lang: savedLang, menuOpen: false, langOpen: false, videoOpen: false, compact: false, tab: "org",
       form: { name: "", email: "", phone: "", loc: "", service: "", msg: "", consent: false, hp: "" },
       errors: {}, status: null };
   }
@@ -506,7 +508,7 @@ class Component extends DCLogic {
     var langs = ["en", "ru", "fr", "pt"].map(function (c) {
       return { code: c.toUpperCase(), lc: c === "pt" ? "pt-PT" : c, pressed: c === code ? "true" : "false",
         name: { en: "English", ru: "Русский", fr: "Français", pt: "Português" }[c],
-        pick: function () { self.setState({ lang: c, menuOpen: false, langOpen: false }); } };
+        pick: function () { try { localStorage.setItem("anna_lang", c); } catch (e) {} self.setState({ lang: c, menuOpen: false, langOpen: false }); } };
     });
     var BA = { en: ["Before & after", "Before", "After", "Previous", "Next", "Slide"], ru: ["До и после", "До", "После", "Назад", "Далее", "Слайд"],
       fr: ["Avant / après", "Avant", "Après", "Précédent", "Suivant", "Diapositive"], pt: ["Antes e depois", "Antes", "Depois", "Anterior", "Seguinte", "Diapositivo"] }[code];
@@ -572,7 +574,7 @@ class Component extends DCLogic {
       fr: ["Le formulaire n'a pas pu être envoyé automatiquement.", "L'envoyer par e-mail →"],
       pt: ["Não foi possível enviar o formulário automaticamente.", "Enviar por e-mail →"] }[code] || [];
     return {
-      t: t, reqTip: reqTip, langs: langs, whyTitleBr: code !== "ru",
+      t: t, reqTip: reqTip, langs: langs, whyTitleBr: code !== "ru" && code !== "fr",
       ba: { title: BA[0], before: BA[1], after: BA[2], prev: BA[3], next: BA[4] }, cur: cur, baDots: baDots, baTotal: slides.length,
       baPrev: function () { self.setState({ slide: si - 1 }); }, baNext: function () { self.setState({ slide: si + 1 }); },
       langOpen: s.langOpen, langExp: s.langOpen ? "true" : "false",
