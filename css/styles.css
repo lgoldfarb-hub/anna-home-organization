@@ -105,7 +105,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #33332F;outline-offset:3p
 .ba-lbl-a{background:rgba(51,51,47,.78);color:#F8F6F2}
 .ba-bar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:20px}
 .ba-zone{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;line-height:1.1}
-.ba-count{font-family:Inter,sans-serif;font-size:13px;color:#5E5D56;margin-left:10px;letter-spacing:.06em}
+.ba-count{font-family:Inter,sans-serif;font-size:13px;color:#5E5D56;margin-right:10px;letter-spacing:.06em}
 .ba-dots{display:flex;gap:4px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
 .ba-dot{width:28px;height:44px;border:0;background:none;cursor:pointer;position:relative;padding:0}
 .ba-dot::after{content:"";position:absolute;left:4px;right:4px;top:21px;height:2px;background:#C9C1B3;transition:background-color .2s}

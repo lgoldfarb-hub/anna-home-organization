@@ -200,7 +200,7 @@
       </div>
       </sc-if>
       <div class="ba-bar">
-        <span class="ba-zone">{{cur.label}} <span class="ba-count">{{cur.n}} / {{baTotal}}</span></span>
+        <span class="ba-zone"><span class="ba-count">{{cur.n}} / {{baTotal}}</span> {{cur.label}}</span>
         <div class="ba-dots">
           <sc-for list="{{baDots}}" as="d" hint-placeholder-count="5"><button type="button" class="ba-dot" aria-label="{{d.label}}" aria-pressed="{{d.on}}" onClick="{{d.go}}"></button></sc-for>
         </div>
