@@ -207,6 +207,8 @@ a.copt:hover{background:#FFFFFF;color:#33332F}
 .copt-ic{width:44px;height:44px;border-radius:50%;background:#C9CFC2;color:#33332F;display:flex;align-items:center;justify-content:center;flex:none}
 .copt-t{font-weight:600;font-size:15px;line-height:1.3}
 .copt-d{font-size:13px;color:#5E5D56;line-height:1.4}
+.copt-copy{flex:none;width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:#5E5D56;display:flex;align-items:center;justify-content:center;cursor:pointer;margin-left:auto}
+.copt-copy:hover,.copt-copy:focus-visible{background:#EAE4DA;color:#33332F}
 .form{background:#F8F6F2;border-radius:32px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px}
 .fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .full{grid-column:1 / -1}

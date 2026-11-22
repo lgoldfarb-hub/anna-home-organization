@@ -5,7 +5,7 @@ class Component extends DCLogic {
     super(props);
     var savedLang = null;
     try { savedLang = localStorage.getItem("anna_lang"); } catch (e) {}
-    this.state = { slide: 0, lang: savedLang, menuOpen: false, langOpen: false, videoOpen: false, photoOpen: null, compact: false, tab: "org",
+    this.state = { slide: 0, lang: savedLang, menuOpen: false, langOpen: false, videoOpen: false, photoOpen: null, copiedEmail: false, compact: false, tab: "org",
       form: { name: "", email: "", phone: "", loc: "", service: "", msg: "", consent: false, hp: "" },
       errors: {}, status: null };
   }
@@ -545,6 +545,8 @@ class Component extends DCLogic {
       return typeof m === "string" ? { n: String(i + 1), text: m, bold: "" } : { n: String(i + 1), text: m.a, bold: m.b };
     });
 
+    var copyLbl = { en: "Copy email", ru: "Скопировать email", fr: "Copier l'e-mail", pt: "Copiar e-mail" }[code] || "Copy email";
+    var copiedLbl = { en: "Copied!", ru: "Скопировано!", fr: "Copié !", pt: "Copiado!" }[code] || "Copied!";
     var waHref = cfg.whatsapp ? "https://wa.me/" + cfg.whatsapp.replace(/\D/g, "") : "";
     var ctaHref = waHref || (cfg.email ? "mailto:" + cfg.email : "");
     var opts = [
@@ -557,7 +559,15 @@ class Component extends DCLogic {
       var tx = o.k === "tg" ? ["Telegram", tgT[code] || tgT.en, ""] : t.opts[o.k];
       return { name: tx[0], t: tx[1], ph: tx[2], d: o.k === "em" ? cfg.email : o.k === "wa" ? cfg.whatsappDisplay : o.k === "tg" ? cfg.telegramHandle : cfg.instagramHandle,
         href: o.href || "#contact", target: o.target, ready: !!o.href, pending: !o.href,
-        isWa: o.k === "wa", isTg: o.k === "tg", isIg: o.k === "ig", isEm: o.k === "em" };
+        isWa: o.k === "wa", isTg: o.k === "tg", isIg: o.k === "ig", isEm: o.k === "em",
+        copyTip: s.copiedEmail ? copiedLbl : copyLbl,
+        copyEmail: function (e) {
+          e.preventDefault(); e.stopPropagation();
+          var text = cfg.email;
+          var done = function () { self.setState({ copiedEmail: true }); setTimeout(function () { self.setState({ copiedEmail: false }); }, 1800); };
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done).catch(done);
+          else done();
+        } };
     });
 
     var er = s.errors, msg = function (k) {
