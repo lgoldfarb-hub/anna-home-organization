@@ -200,7 +200,7 @@ a.closing:hover{color:#8E5F49}
 .sig{font-family:"Mrs Saint Delafield",cursive;font-size:clamp(56px,6vw,76px);line-height:1;color:#8E5F49;margin-top:4px}
 @media (max-width:900px){.about{grid-template-columns:minmax(0,1fr)}.arch{max-width:460px}}
 /* contact */
-.contact{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,88px);align-items:start}
+.contact{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(36px,6vw,88px);align-items:end}
 .opts{display:flex;flex-direction:column;gap:12px;margin-top:40px}
 .copt{display:flex;align-items:center;gap:16px;padding:16px 20px;background:#F8F6F2;border-radius:20px;text-decoration:none;color:#33332F;min-height:72px}
 a.copt:hover{background:#FFFFFF;color:#33332F}
