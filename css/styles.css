@@ -7,7 +7,7 @@ h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;margin:0
 p{margin:0}
 .i{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(20px,5vw,56px)}
-section{scroll-margin-top:72px}
+section{scroll-margin-top:96px}
 .sec{padding-block:clamp(84px,10vw,140px)}
 .h2{font-size:clamp(40px,5.2vw,64px);line-height:1.04}
 .h3{font-size:clamp(30px,3vw,40px);line-height:1.08}
