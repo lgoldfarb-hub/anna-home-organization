@@ -527,7 +527,7 @@ class Component extends DCLogic {
       { b: "assets/images/before-after/08-pollock-to-mondrian.jpg", single: true, noLabel: true,
         custom: { en: "Turn your Jackson Pollock into Piet Mondrian.", ru: "Превратите своего Джексона Поллока в Пита Мондриана.", fr: "Transformez votre Jackson Pollock en Piet Mondrian.", pt: "Transforme o seu Jackson Pollock num Piet Mondrian." } }
     ];
-    var ORG = { en: "Already organized by Anna", ru: "Уже организовано Анной", fr: "Déjà organisé par Anna", pt: "Já organizado pela Anna" }[code];
+    var ORG = { en: "Organized by Anna from day one during the move", ru: "Организовано Анной с первого дня переезда", fr: "Organisé par Anna dès le premier jour du déménagement", pt: "Organizado pela Anna desde o primeiro dia da mudança" }[code];
     var si = ((s.slide % slides.length) + slides.length) % slides.length;
     var sl = slides[si];
     var cur = { b: sl.b, a: sl.a || sl.b, n: si + 1, single: !!sl.single, pair: !sl.single,
