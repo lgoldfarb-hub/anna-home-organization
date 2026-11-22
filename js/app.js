@@ -568,7 +568,9 @@ class Component extends DCLogic {
         href: o.href || "#contact", target: o.target, ready: !!o.href, pending: !o.href,
         isWa: o.k === "wa", isTg: o.k === "tg", isIg: o.k === "ig", isEm: o.k === "em",
         canCopy: canCopy,
+        justCopied: s.copiedKey === o.k,
         copyTip: s.copiedKey === o.k ? copiedLbl : copyLbl,
+        copiedLbl: copiedLbl,
         copyValue: function (e) {
           e.preventDefault(); e.stopPropagation();
           var key = o.k, text = dVal;

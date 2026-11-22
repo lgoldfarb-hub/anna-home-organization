@@ -208,8 +208,12 @@ a.copt:hover{background:#FFFFFF;color:#33332F}
 .copt-ic{width:44px;height:44px;border-radius:50%;background:#C9CFC2;color:#33332F;display:flex;align-items:center;justify-content:center;flex:none}
 .copt-t{font-weight:600;font-size:15px;line-height:1.3}
 .copt-d{font-size:13px;color:#5E5D56;line-height:1.4}
-.copt-copy{flex:none;width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:#5E5D56;display:flex;align-items:center;justify-content:center;cursor:pointer;margin-left:auto}
+.copt-copy-wrap{position:relative;margin-left:auto;flex:none}
+.copt-copy{width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:#5E5D56;display:flex;align-items:center;justify-content:center;cursor:pointer}
 .copt-copy:hover,.copt-copy:focus-visible{background:#EAE4DA;color:#33332F}
+.copt-copy-pop{position:absolute;bottom:calc(100% + 8px);right:0;background:#33332F;color:#F8F6F2;font-size:12px;font-weight:600;letter-spacing:.02em;padding:6px 12px;border-radius:8px;white-space:nowrap;pointer-events:none;animation:copt-pop 1.8s ease forwards}
+.copt-copy-pop::after{content:"";position:absolute;top:100%;right:14px;border:5px solid transparent;border-top-color:#33332F}
+@keyframes copt-pop{0%{opacity:0;transform:translateY(4px)}10%{opacity:1;transform:translateY(0)}80%{opacity:1}100%{opacity:0}}
 .form{background:#F8F6F2;border-radius:32px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:20px}
 .fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .full{grid-column:1 / -1}
