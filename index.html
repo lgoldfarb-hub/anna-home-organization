@@ -20,7 +20,7 @@
 <!-- Hidden static form so Netlify's build-time parser detects and registers this form.
      The real, visible form is rendered from the <template> below and submitted via JS
      fetch() to Netlify's form-handling endpoint — this one is never shown or submitted. -->
-<form name="contact" data-netlify="true" netlify-honeypot="website" hidden>
+<form name="contact" data-netlify="true" netlify-honeypot="website" style="display:none">
   <input type="text" name="name">
   <input type="email" name="email">
   <input type="tel" name="phone">
