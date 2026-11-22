@@ -598,6 +598,7 @@ class Component extends DCLogic {
     return {
       t: t, reqTip: reqTip, langs: langs, whyTitleBr: code === "en", heroH1Cls: "hero-h1-" + code,
       ba: { title: BA[0], before: BA[1], after: BA[2], prev: BA[3], next: BA[4], expand: BA[6] }, cur: cur, baDots: baDots, baTotal: slides.length,
+      barSingleCls: cur.single ? "ba-bar-single" : "",
       baPrev: function () { self.setState({ slide: si - 1 }); }, baNext: function () { self.setState({ slide: si + 1 }); },
       langOpen: s.langOpen, langExp: s.langOpen ? "true" : "false",
       curCode: code.toUpperCase(), curName: { en: "English", ru: "Русский", fr: "Français", pt: "Português" }[code],

@@ -199,7 +199,7 @@
         <figure class="ba-fig"><button type="button" class="ba-zoom" aria-label="{{ba.expand}}" onClick="{{cur.clickA}}"><img src="{{cur.a}}" alt="{{cur.al}} — {{cur.label}}"></button><figcaption class="ba-lbl ba-lbl-a">{{cur.al}}</figcaption></figure>
       </div>
       </sc-if>
-      <div class="ba-bar">
+      <div class="ba-bar {{barSingleCls}}">
         <span class="ba-zone"><span class="ba-count">{{cur.n}} / {{baTotal}}</span> {{cur.labelA}}<sc-if value="{{cur.labelB}}" hint-placeholder-val="{{ false }}"><br>{{cur.labelB}}</sc-if></span>
         <div class="ba-dots">
           <sc-for list="{{baDots}}" as="d" hint-placeholder-count="5"><button type="button" class="ba-dot" aria-label="{{d.label}}" aria-pressed="{{d.on}}" onClick="{{d.go}}"></button></sc-for>
