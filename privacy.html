@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Anna Goldfarb, Home Organization</title>
-<meta name="description" content="Privacy Policy for Anna Goldfarb's Home Organization website: what data is collected through the contact form, how it is used, and your rights under the GDPR.">
+<title id="pp-title">Privacy Policy — Anna Goldfarb, Home Organization</title>
+<meta id="pp-desc" name="description" content="Privacy Policy for Anna Goldfarb's Home Organization website: what data is collected through the contact form, how it is used, and your rights under the GDPR.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,16 @@
   h1,h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;letter-spacing:-.01em;color:#33332F;margin:0}
   .wrap{max-width:760px;margin:0 auto;padding:0 24px}
   header.phdr{padding:28px 0;border-bottom:1px solid #DCD5C9}
+  .phdr-row{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:#33332F;font-size:15px;font-weight:500}
   .back:hover{color:#8E5F49}
   .back svg{flex:none}
   .brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;color:#33332F;text-decoration:none;display:block;margin-top:14px}
   .brand b{font-weight:600}
   .brand small{display:block;font-family:Inter,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8E8A7D;margin-top:2px}
+  .langsw{display:flex;gap:6px}
+  .langsw button{font-family:Inter,sans-serif;font-size:12px;font-weight:600;letter-spacing:.04em;border:1px solid #DCD5C9;background:#fff;color:#33332F;border-radius:8px;padding:6px 10px;cursor:pointer}
+  .langsw button[aria-pressed="true"]{background:#33332F;color:#F8F6F2;border-color:#33332F}
   main{padding:48px 0 96px}
   h1{font-size:clamp(34px,5vw,46px);margin-bottom:8px}
   .updated{font-size:14px;color:#8E8A7D;margin:0 0 40px}
@@ -38,92 +42,239 @@
 </head>
 <body>
 <header class="phdr">
-  <div class="wrap">
-    <a class="back" href="index.html#contact">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
-      Back to the website
-    </a>
-    <a class="brand" href="index.html"><b>Anna.</b><small>Home Organization</small></a>
+  <div class="wrap phdr-row">
+    <div>
+      <a class="back" href="index.html#contact" id="pp-back">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg>
+        <span id="pp-back-text">Back to the website</span>
+      </a>
+      <a class="brand" href="index.html"><b>Anna.</b><small>Home Organization</small></a>
+    </div>
+    <div class="langsw" id="pp-langsw" role="group" aria-label="Language"></div>
   </div>
 </header>
 
 <main>
   <div class="wrap">
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 22 November 2026</p>
+    <h1 id="pp-h1">Privacy Policy</h1>
+    <p class="updated"><span id="pp-updated-label">Last updated:</span> 22 November 2026</p>
 
-    <p>This Privacy Policy explains how Anna Goldfarb ("Anna", "I", "me") collects, uses and protects the personal data you submit through the contact form on this website (the "Site"), in accordance with the EU General Data Protection Regulation (GDPR).</p>
+    <p id="pp-intro"></p>
 
-    <div class="box">
-      <p><strong>In short:</strong> the information you submit is used only by Anna Goldfarb to respond to your inquiry and, where you go ahead, to provide the home organization or moving services you requested. It is never sold, rented, or shared with third parties for marketing purposes.</p>
-    </div>
+    <div class="box"><p id="pp-short"></p></div>
 
-    <h2>1. Who is responsible for your data</h2>
-    <p>Anna Goldfarb, professional home organizer, operating in Portugal and internationally, is the data controller for the personal data collected through this Site. You can reach Anna directly using the contact details on the Site.</p>
+    <h2 id="pp-h2-1"></h2>
+    <div id="pp-body-1"></div>
 
-    <h2>2. What data is collected</h2>
-    <p>When you submit the contact form, the following information may be collected:</p>
-    <ul>
-      <li>Full name</li>
-      <li>Email address</li>
-      <li>Phone number / WhatsApp number (optional)</li>
-      <li>Location (city or country)</li>
-      <li>Service you are interested in</li>
-      <li>Any details you choose to share about your project or home</li>
-    </ul>
-    <p>No data is collected through cookies or tracking scripts on this Site beyond what is strictly necessary to deliver the form submission.</p>
+    <h2 id="pp-h2-2"></h2>
+    <div id="pp-body-2"></div>
 
-    <h2>3. Why your data is collected (purpose and legal basis)</h2>
-    <p>Your data is used solely to:</p>
-    <ul>
-      <li>respond to your inquiry;</li>
-      <li>discuss, plan and deliver the home organization or moving services you request;</li>
-      <li>keep basic records of client communication for as long as reasonably needed for the project.</li>
-    </ul>
-    <p>The legal basis for this processing is your consent (given by ticking the consent box before submitting the form) and, once a project begins, the performance of the service agreement between you and Anna.</p>
+    <h2 id="pp-h2-3"></h2>
+    <div id="pp-body-3"></div>
 
-    <h2>4. No third-party sharing</h2>
-    <p>Your data is used exclusively by Anna Goldfarb to provide the services associated with your project. It is <strong>not</strong> sold, rented, traded, or shared with third parties for advertising or marketing purposes.</p>
-    <p>Your data may only be shared with trusted service providers strictly where needed to operate the Site and the form, such as:</p>
-    <ul>
-      <li><strong>FormSubmit</strong>, the third-party service that delivers form submissions by email; or</li>
-      <li><strong>Netlify</strong>, the hosting provider for this Site,</li>
-    </ul>
-    <p>both of which process data only on Anna's behalf and under their own privacy and security obligations, and never for their own marketing purposes. No other third party receives your data, and it is never transferred for commercial purposes.</p>
+    <h2 id="pp-h2-4"></h2>
+    <div id="pp-body-4"></div>
 
-    <h2>5. How long your data is kept</h2>
-    <p>Your data is kept only for as long as necessary to respond to your inquiry and, if you become a client, for the duration of the project plus a reasonable period afterwards for record-keeping. If no project goes ahead, your inquiry details are deleted within a reasonable time once it's clear there is no ongoing need.</p>
+    <h2 id="pp-h2-5"></h2>
+    <div id="pp-body-5"></div>
 
-    <h2>6. Your rights under the GDPR</h2>
-    <p>You have the right to:</p>
-    <ul>
-      <li>access the personal data held about you;</li>
-      <li>correct inaccurate or incomplete data;</li>
-      <li>request deletion of your data ("right to be forgotten");</li>
-      <li>restrict or object to the processing of your data;</li>
-      <li>request a copy of your data in a portable format;</li>
-      <li>withdraw your consent at any time, without affecting the lawfulness of processing carried out before you withdrew it.</li>
-    </ul>
-    <p>To exercise any of these rights, simply contact Anna using the details provided on the Site. You also have the right to lodge a complaint with your local data protection supervisory authority.</p>
+    <h2 id="pp-h2-6"></h2>
+    <div id="pp-body-6"></div>
 
-    <h2>7. Data security</h2>
-    <p>Reasonable technical and organizational measures are used to protect your data against unauthorized access, loss, or misuse. However, no method of electronic transmission or storage is 100% secure, and absolute security cannot be guaranteed.</p>
+    <h2 id="pp-h2-7"></h2>
+    <div id="pp-body-7"></div>
 
-    <h2>8. Children's privacy</h2>
-    <p>This Site is not directed at children, and personal data is not knowingly collected from children.</p>
+    <h2 id="pp-h2-8"></h2>
+    <div id="pp-body-8"></div>
 
-    <h2>9. Changes to this policy</h2>
-    <p>This Privacy Policy may be updated from time to time, for example to reflect changes in how the Site or services operate. The "Last updated" date at the top of this page will reflect the most recent revision.</p>
+    <h2 id="pp-h2-9"></h2>
+    <div id="pp-body-9"></div>
 
-    <h2>10. Contact</h2>
-    <p>If you have any questions about this Privacy Policy or how your data is handled, please get in touch using the contact details on the <a href="index.html#contact">Contact</a> section of the Site.</p>
+    <h2 id="pp-h2-10"></h2>
+    <div id="pp-body-10"></div>
   </div>
 </main>
 
 <footer class="pfoot">
   <div class="wrap">
-    <p>&copy; Anna Goldfarb — Home Organization. <a href="index.html">Back to homepage</a></p>
+    <p>&copy; Anna Goldfarb — Home Organization. <a href="index.html" id="pp-footer-link">Back to homepage</a></p>
   </div>
 </footer>
+
+<script>
+(function () {
+  "use strict";
+  var T = {
+    en: {
+      title: "Privacy Policy — Anna Goldfarb, Home Organization",
+      metaDescription: "Privacy Policy for Anna Goldfarb's Home Organization website: what data is collected through the contact form, how it is used, and your rights under the GDPR.",
+      backLink: "Back to the website",
+      lastUpdatedLabel: "Last updated:",
+      h1: "Privacy Policy",
+      introParagraph: "This Privacy Policy explains how Anna Goldfarb (\"Anna\", \"I\", \"me\") collects, uses and protects the personal data you submit through the contact form on this website (the \"Site\"), in accordance with the EU General Data Protection Regulation (GDPR).",
+      shortBoxText: "<strong>In short:</strong> the information you submit is used only by Anna Goldfarb to respond to your inquiry and, where you go ahead, to provide the home organization or moving services you requested. It is never sold, rented, or shared with third parties for marketing purposes.",
+      h2_1: "1. Who is responsible for your data",
+      body_1: "<p>Anna Goldfarb, professional home organizer, operating in Portugal and internationally, is the data controller for the personal data collected through this Site. You can reach Anna directly using the contact details on the Site.</p>",
+      h2_2: "2. What data is collected",
+      body_2: "<p>When you submit the contact form, the following information may be collected:</p><ul><li>Full name</li><li>Email address</li><li>Phone number / WhatsApp number (optional)</li><li>Location (city or country)</li><li>Service you are interested in</li><li>Any details you choose to share about your project or home</li></ul><p>No data is collected through cookies or tracking scripts on this Site beyond what is strictly necessary to deliver the form submission.</p>",
+      h2_3: "3. Why your data is collected (purpose and legal basis)",
+      body_3: "<p>Your data is used solely to:</p><ul><li>respond to your inquiry;</li><li>discuss, plan and deliver the home organization or moving services you request;</li><li>keep basic records of client communication for as long as reasonably needed for the project.</li></ul><p>The legal basis for this processing is your consent (given by ticking the consent box before submitting the form) and, once a project begins, the performance of the service agreement between you and Anna.</p>",
+      h2_4: "4. No third-party sharing",
+      body_4: "<p>Your data is used exclusively by Anna Goldfarb to provide the services associated with your project. It is <strong>not</strong> sold, rented, traded, or shared with third parties for advertising or marketing purposes.</p><p>Your data may only be shared with trusted service providers strictly where needed to operate the Site and the form, such as:</p><ul><li><strong>FormSubmit</strong>, the third-party service that delivers form submissions by email; or</li><li><strong>Netlify</strong>, the hosting provider for this Site,</li></ul><p>both of which process data only on Anna's behalf and under their own privacy and security obligations, and never for their own marketing purposes. No other third party receives your data, and it is never transferred for commercial purposes.</p>",
+      h2_5: "5. How long your data is kept",
+      body_5: "<p>Your data is kept only for as long as necessary to respond to your inquiry and, if you become a client, for the duration of the project plus a reasonable period afterwards for record-keeping. If no project goes ahead, your inquiry details are deleted within a reasonable time once it's clear there is no ongoing need.</p>",
+      h2_6: "6. Your rights under the GDPR",
+      body_6: "<p>You have the right to:</p><ul><li>access the personal data held about you;</li><li>correct inaccurate or incomplete data;</li><li>request deletion of your data (\"right to be forgotten\");</li><li>restrict or object to the processing of your data;</li><li>request a copy of your data in a portable format;</li><li>withdraw your consent at any time, without affecting the lawfulness of processing carried out before you withdrew it.</li></ul><p>To exercise any of these rights, simply contact Anna using the details provided on the Site. You also have the right to lodge a complaint with your local data protection supervisory authority.</p>",
+      h2_7: "7. Data security",
+      body_7: "<p>Reasonable technical and organizational measures are used to protect your data against unauthorized access, loss, or misuse. However, no method of electronic transmission or storage is 100% secure, and absolute security cannot be guaranteed.</p>",
+      h2_8: "8. Children's privacy",
+      body_8: "<p>This Site is not directed at children, and personal data is not knowingly collected from children.</p>",
+      h2_9: "9. Changes to this policy",
+      body_9: "<p>This Privacy Policy may be updated from time to time, for example to reflect changes in how the Site or services operate. The \"Last updated\" date at the top of this page will reflect the most recent revision.</p>",
+      h2_10: "10. Contact",
+      body_10: "<p>If you have any questions about this Privacy Policy or how your data is handled, please get in touch using the contact details on the <a href=\"index.html#contact\">Contact</a> section of the Site.</p>",
+      footerBackText: "Back to homepage"
+    },
+    ru: {
+      title: "Политика конфиденциальности — Anna Goldfarb, Home Organization",
+      metaDescription: "Политика конфиденциальности сайта Anna Goldfarb Home Organization: какие данные собираются через контактную форму, как они используются и какие права вы имеете согласно GDPR.",
+      backLink: "Вернуться на сайт",
+      lastUpdatedLabel: "Обновлено:",
+      h1: "Политика конфиденциальности",
+      introParagraph: "Эта Политика конфиденциальности объясняет, как Anna Goldfarb («Анна», «я», «мне») собирает, использует и защищает персональные данные, которые вы указываете в контактной форме на этом сайте («Сайт»), в соответствии с Общим регламентом ЕС по защите данных (GDPR).",
+      shortBoxText: "<strong>Коротко:</strong> предоставленная вами информация используется только Anna Goldfarb для ответа на ваш запрос и, если вы продолжите сотрудничество, для оказания услуг по организации пространства или переезду, которые вы запросили. Она никогда не продаётся, не сдаётся в аренду и не передаётся третьим лицам в маркетинговых целях.",
+      h2_1: "1. Кто отвечает за ваши данные",
+      body_1: "<p>Anna Goldfarb, профессиональный организатор пространства, работающая в Португалии и по всему миру, является контролёром персональных данных, собираемых через этот Сайт. Вы можете связаться с Анной напрямую, используя контактные данные на Сайте.</p>",
+      h2_2: "2. Какие данные собираются",
+      body_2: "<p>При отправке контактной формы могут быть собраны следующие данные:</p><ul><li>Имя и фамилия</li><li>Адрес электронной почты</li><li>Номер телефона / WhatsApp (необязательно)</li><li>Местоположение (город или страна)</li><li>Интересующая вас услуга</li><li>Любые детали, которыми вы решите поделиться о вашем проекте или доме</li></ul><p>Этот Сайт не собирает данные с помощью файлов cookie или скриптов отслеживания, за исключением того, что строго необходимо для обработки отправленной формы.</p>",
+      h2_3: "3. Зачем собираются ваши данные (цель и правовое основание)",
+      body_3: "<p>Ваши данные используются исключительно для того, чтобы:</p><ul><li>ответить на ваш запрос;</li><li>обсудить, спланировать и оказать услуги по организации пространства или переезду, которые вы запрашиваете;</li><li>вести базовую переписку с клиентом в течение времени, разумно необходимого для проекта.</li></ul><p>Правовым основанием для этой обработки является ваше согласие (предоставленное путём отметки галочки согласия перед отправкой формы), а после начала проекта — исполнение договора об оказании услуг между вами и Анной.</p>",
+      h2_4: "4. Отсутствие передачи третьим лицам",
+      body_4: "<p>Ваши данные используются исключительно Anna Goldfarb для оказания услуг, связанных с вашим проектом. Они <strong>никогда</strong> не продаются, не сдаются в аренду, не обмениваются и не передаются третьим лицам в рекламных или маркетинговых целях.</p><p>Ваши данные могут передаваться только доверенным поставщикам услуг, и только там, где это строго необходимо для работы Сайта и формы, а именно:</p><ul><li><strong>FormSubmit</strong> — сторонний сервис, доставляющий отправленные формы по электронной почте; или</li><li><strong>Netlify</strong> — провайдер хостинга этого Сайта,</li></ul><p>оба из которых обрабатывают данные только от имени Анны и в рамках своих собственных обязательств по конфиденциальности и безопасности, и никогда — в собственных маркетинговых целях. Никакая другая третья сторона не получает ваши данные, и они никогда не передаются в коммерческих целях.</p>",
+      h2_5: "5. Как долго хранятся ваши данные",
+      body_5: "<p>Ваши данные хранятся только в течение времени, необходимого для ответа на ваш запрос, а если вы становитесь клиентом — в течение всего проекта плюс разумный период после его завершения для ведения учёта. Если сотрудничество не продолжается, данные вашего запроса удаляются в разумный срок, как только становится ясно, что дальнейшая необходимость в них отсутствует.</p>",
+      h2_6: "6. Ваши права согласно GDPR",
+      body_6: "<p>Вы имеете право:</p><ul><li>получить доступ к хранящимся о вас персональным данным;</li><li>исправить неточные или неполные данные;</li><li>потребовать удаления ваших данных («право на забвение»);</li><li>ограничить обработку ваших данных или возразить против неё;</li><li>запросить копию ваших данных в переносимом формате;</li><li>отозвать своё согласие в любое время, без ущерба для законности обработки, проведённой до отзыва согласия.</li></ul><p>Чтобы воспользоваться любым из этих прав, просто свяжитесь с Анной, используя контактные данные, указанные на Сайте. Вы также имеете право подать жалобу в местный надзорный орган по защите данных.</p>",
+      h2_7: "7. Безопасность данных",
+      body_7: "<p>Для защиты ваших данных от несанкционированного доступа, утраты или неправомерного использования применяются разумные технические и организационные меры. Однако ни один способ электронной передачи или хранения данных не является стопроцентно безопасным, и абсолютная безопасность не может быть гарантирована.</p>",
+      h2_8: "8. Конфиденциальность данных детей",
+      body_8: "<p>Этот Сайт не предназначен для детей, и персональные данные сознательно у детей не собираются.</p>",
+      h2_9: "9. Изменения в этой политике",
+      body_9: "<p>Эта Политика конфиденциальности может периодически обновляться, например, чтобы отразить изменения в работе Сайта или услуг. Дата «Обновлено» в верхней части этой страницы будет отражать последнюю редакцию.</p>",
+      h2_10: "10. Контакты",
+      body_10: "<p>Если у вас есть вопросы по поводу этой Политики конфиденциальности или обработки ваших данных, пожалуйста, свяжитесь с нами, используя контактные данные в разделе <a href=\"index.html#contact\">Контакты</a> на Сайте.</p>",
+      footerBackText: "Вернуться на главную страницу"
+    },
+    fr: {
+      title: "Politique de confidentialité — Anna Goldfarb, Home Organization",
+      metaDescription: "Politique de confidentialité du site Anna Goldfarb Home Organization : quelles données sont collectées via le formulaire de contact, comment elles sont utilisées, et vos droits selon le RGPD.",
+      backLink: "Retour au site",
+      lastUpdatedLabel: "Dernière mise à jour :",
+      h1: "Politique de confidentialité",
+      introParagraph: "Cette Politique de confidentialité explique comment Anna Goldfarb (« Anna », « je », « moi ») collecte, utilise et protège les données personnelles que vous soumettez via le formulaire de contact de ce site (le « Site »), conformément au Règlement général sur la protection des données de l'UE (RGPD).",
+      shortBoxText: "<strong>En bref :</strong> les informations que vous soumettez sont utilisées uniquement par Anna Goldfarb pour répondre à votre demande et, si vous donnez suite, pour fournir les services d'organisation d'intérieur ou de déménagement que vous avez demandés. Elles ne sont jamais vendues, louées, ni partagées avec des tiers à des fins commerciales.",
+      h2_1: "1. Qui est responsable de vos données",
+      body_1: "<p>Anna Goldfarb, organisatrice d'intérieur professionnelle, exerçant au Portugal et à l'international, est la responsable du traitement des données personnelles collectées via ce Site. Vous pouvez contacter Anna directement en utilisant les coordonnées indiquées sur le Site.</p>",
+      h2_2: "2. Quelles données sont collectées",
+      body_2: "<p>Lorsque vous soumettez le formulaire de contact, les informations suivantes peuvent être collectées :</p><ul><li>Nom complet</li><li>Adresse e-mail</li><li>Numéro de téléphone / WhatsApp (facultatif)</li><li>Localisation (ville ou pays)</li><li>Service qui vous intéresse</li><li>Tout détail que vous choisissez de partager concernant votre projet ou votre logement</li></ul><p>Aucune donnée n'est collectée par des cookies ou des scripts de suivi sur ce Site, au-delà de ce qui est strictement nécessaire pour traiter l'envoi du formulaire.</p>",
+      h2_3: "3. Pourquoi vos données sont collectées (finalité et base légale)",
+      body_3: "<p>Vos données sont utilisées uniquement pour :</p><ul><li>répondre à votre demande ;</li><li>discuter, planifier et fournir les services d'organisation d'intérieur ou de déménagement que vous demandez ;</li><li>conserver un historique de base des échanges avec le client pendant la durée raisonnablement nécessaire au projet.</li></ul><p>La base légale de ce traitement est votre consentement (donné en cochant la case de consentement avant l'envoi du formulaire) et, une fois un projet engagé, l'exécution du contrat de prestation de services entre vous et Anna.</p>",
+      h2_4: "4. Aucun partage avec des tiers",
+      body_4: "<p>Vos données sont utilisées exclusivement par Anna Goldfarb pour fournir les services liés à votre projet. Elles ne sont <strong>jamais</strong> vendues, louées, échangées, ni partagées avec des tiers à des fins publicitaires ou commerciales.</p><p>Vos données ne peuvent être partagées qu'avec des prestataires de confiance, et uniquement lorsque cela est strictement nécessaire au fonctionnement du Site et du formulaire, à savoir :</p><ul><li><strong>FormSubmit</strong>, le service tiers qui achemine les soumissions du formulaire par e-mail ; ou</li><li><strong>Netlify</strong>, l'hébergeur de ce Site,</li></ul><p>qui traitent tous deux les données uniquement pour le compte d'Anna et dans le cadre de leurs propres obligations de confidentialité et de sécurité, jamais à leurs propres fins commerciales. Aucun autre tiers ne reçoit vos données, et elles ne sont jamais transférées à des fins commerciales.</p>",
+      h2_5: "5. Durée de conservation de vos données",
+      body_5: "<p>Vos données sont conservées uniquement le temps nécessaire pour répondre à votre demande et, si vous devenez cliente ou client, pendant la durée du projet plus une période raisonnable par la suite à des fins d'archivage. Si aucun projet n'est engagé, les informations de votre demande sont supprimées dans un délai raisonnable dès qu'il est clair qu'aucune suite n'est nécessaire.</p>",
+      h2_6: "6. Vos droits selon le RGPD",
+      body_6: "<p>Vous avez le droit de :</p><ul><li>accéder aux données personnelles vous concernant ;</li><li>corriger des données inexactes ou incomplètes ;</li><li>demander la suppression de vos données (« droit à l'oubli ») ;</li><li>restreindre ou vous opposer au traitement de vos données ;</li><li>demander une copie de vos données dans un format portable ;</li><li>retirer votre consentement à tout moment, sans affecter la licéité du traitement effectué avant ce retrait.</li></ul><p>Pour exercer l'un de ces droits, contactez simplement Anna en utilisant les coordonnées indiquées sur le Site. Vous avez également le droit d'introduire une réclamation auprès de votre autorité de contrôle locale en matière de protection des données.</p>",
+      h2_7: "7. Sécurité des données",
+      body_7: "<p>Des mesures techniques et organisationnelles raisonnables sont mises en œuvre pour protéger vos données contre tout accès non autorisé, perte ou usage abusif. Cependant, aucune méthode de transmission ou de stockage électronique n'est sécurisée à 100 %, et une sécurité absolue ne peut être garantie.</p>",
+      h2_8: "8. Confidentialité des mineurs",
+      body_8: "<p>Ce Site ne s'adresse pas aux enfants, et aucune donnée personnelle n'est sciemment collectée auprès de mineurs.</p>",
+      h2_9: "9. Modifications de cette politique",
+      body_9: "<p>Cette Politique de confidentialité peut être mise à jour de temps à autre, par exemple pour refléter des changements dans le fonctionnement du Site ou des services. La date de « Dernière mise à jour » en haut de cette page reflétera la révision la plus récente.</p>",
+      h2_10: "10. Contact",
+      body_10: "<p>Pour toute question concernant cette Politique de confidentialité ou le traitement de vos données, veuillez nous contacter en utilisant les coordonnées indiquées dans la section <a href=\"index.html#contact\">Contact</a> du Site.</p>",
+      footerBackText: "Retour à la page d'accueil"
+    },
+    pt: {
+      title: "Política de Privacidade — Anna Goldfarb, Home Organization",
+      metaDescription: "Política de Privacidade do site Anna Goldfarb Home Organization: que dados são recolhidos através do formulário de contacto, como são utilizados e quais os seus direitos ao abrigo do RGPD.",
+      backLink: "Voltar ao site",
+      lastUpdatedLabel: "Última atualização:",
+      h1: "Política de Privacidade",
+      introParagraph: "Esta Política de Privacidade explica como a Anna Goldfarb («Anna», «eu», «mim») recolhe, utiliza e protege os dados pessoais que submete através do formulário de contacto neste site (o «Site»), em conformidade com o Regulamento Geral sobre a Proteção de Dados da UE (RGPD).",
+      shortBoxText: "<strong>Em resumo:</strong> a informação que submete é utilizada apenas pela Anna Goldfarb para responder à sua mensagem e, caso avance, para prestar os serviços de organização de casas ou mudanças que solicitou. Nunca é vendida, alugada ou partilhada com terceiros para fins de marketing.",
+      h2_1: "1. Quem é responsável pelos seus dados",
+      body_1: "<p>A Anna Goldfarb, organizadora profissional de casas, a operar em Portugal e internacionalmente, é a responsável pelo tratamento dos dados pessoais recolhidos através deste Site. Pode contactar a Anna diretamente através dos dados de contacto indicados no Site.</p>",
+      h2_2: "2. Que dados são recolhidos",
+      body_2: "<p>Ao submeter o formulário de contacto, podem ser recolhidas as seguintes informações:</p><ul><li>Nome completo</li><li>Endereço de e-mail</li><li>Número de telefone / WhatsApp (opcional)</li><li>Localidade (cidade ou país)</li><li>Serviço do seu interesse</li><li>Quaisquer detalhes que decida partilhar sobre o seu projeto ou a sua casa</li></ul><p>Este Site não recolhe dados através de cookies ou scripts de monitorização, para além do estritamente necessário para processar o envio do formulário.</p>",
+      h2_3: "3. Porque são recolhidos os seus dados (finalidade e base legal)",
+      body_3: "<p>Os seus dados são utilizados exclusivamente para:</p><ul><li>responder à sua mensagem;</li><li>discutir, planear e prestar os serviços de organização de casas ou mudanças que solicita;</li><li>manter registos básicos de comunicação com o cliente durante o tempo razoavelmente necessário ao projeto.</li></ul><p>A base legal para este tratamento é o seu consentimento (dado ao assinalar a caixa de consentimento antes de submeter o formulário) e, assim que um projeto é iniciado, a execução do contrato de prestação de serviços entre si e a Anna.</p>",
+      h2_4: "4. Sem partilha com terceiros",
+      body_4: "<p>Os seus dados são utilizados exclusivamente pela Anna Goldfarb para prestar os serviços associados ao seu projeto. <strong>Nunca</strong> são vendidos, alugados, trocados ou partilhados com terceiros para fins publicitários ou de marketing.</p><p>Os seus dados só podem ser partilhados com prestadores de serviços de confiança, estritamente quando necessário para o funcionamento do Site e do formulário, nomeadamente:</p><ul><li><strong>FormSubmit</strong>, o serviço de terceiros que entrega os envios do formulário por e-mail; ou</li><li><strong>Netlify</strong>, o fornecedor de alojamento deste Site,</li></ul><p>ambos processam os dados apenas em nome da Anna e sob as suas próprias obrigações de privacidade e segurança, nunca para fins de marketing próprios. Nenhum outro terceiro recebe os seus dados, e estes nunca são transferidos para fins comerciais.</p>",
+      h2_5: "5. Durante quanto tempo os seus dados são conservados",
+      body_5: "<p>Os seus dados são conservados apenas durante o tempo necessário para responder à sua mensagem e, caso se torne cliente, durante a duração do projeto mais um período razoável depois, para efeitos de registo. Caso não avance nenhum projeto, os dados da sua mensagem são eliminados num prazo razoável, assim que for claro que não existe necessidade de os manter.</p>",
+      h2_6: "6. Os seus direitos ao abrigo do RGPD",
+      body_6: "<p>Tem o direito de:</p><ul><li>aceder aos dados pessoais que lhe dizem respeito;</li><li>corrigir dados inexatos ou incompletos;</li><li>solicitar a eliminação dos seus dados («direito ao esquecimento»);</li><li>restringir ou opor-se ao tratamento dos seus dados;</li><li>solicitar uma cópia dos seus dados num formato portátil;</li><li>retirar o seu consentimento a qualquer momento, sem afetar a licitude do tratamento realizado antes dessa retirada.</li></ul><p>Para exercer qualquer um destes direitos, basta contactar a Anna através dos dados de contacto indicados no Site. Tem também o direito de apresentar uma reclamação junto da sua autoridade de controlo de proteção de dados local.</p>",
+      h2_7: "7. Segurança dos dados",
+      body_7: "<p>São utilizadas medidas técnicas e organizativas razoáveis para proteger os seus dados contra acesso não autorizado, perda ou utilização indevida. No entanto, nenhum método de transmissão ou armazenamento eletrónico é 100% seguro, pelo que não é possível garantir uma segurança absoluta.</p>",
+      h2_8: "8. Privacidade de menores",
+      body_8: "<p>Este Site não se dirige a crianças, e não são recolhidos conscientemente dados pessoais de menores.</p>",
+      h2_9: "9. Alterações a esta política",
+      body_9: "<p>Esta Política de Privacidade pode ser atualizada periodicamente, por exemplo para refletir alterações no funcionamento do Site ou dos serviços. A data de «Última atualização» no topo desta página refletirá a revisão mais recente.</p>",
+      h2_10: "10. Contacto",
+      body_10: "<p>Se tiver alguma questão sobre esta Política de Privacidade ou sobre o tratamento dos seus dados, entre em contacto utilizando os dados indicados na secção <a href=\"index.html#contact\">Contacto</a> do Site.</p>",
+      footerBackText: "Voltar à página inicial"
+    }
+  };
+
+  var LANG_NAMES = { en: "EN", ru: "RU", fr: "FR", pt: "PT" };
+  var LANGS = ["en", "ru", "fr", "pt"];
+
+  function getStoredLang() {
+    try {
+      var v = localStorage.getItem("anna_lang");
+      if (v && T[v]) return v;
+    } catch (e) {}
+    return null;
+  }
+
+  function setStoredLang(code) {
+    try { localStorage.setItem("anna_lang", code); } catch (e) {}
+  }
+
+  function render(code) {
+    var t = T[code] || T.en;
+    document.documentElement.lang = code === "pt" ? "pt-PT" : code;
+    document.getElementById("pp-title").textContent = t.title;
+    document.getElementById("pp-desc").setAttribute("content", t.metaDescription);
+    document.getElementById("pp-back-text").textContent = t.backLink;
+    document.getElementById("pp-updated-label").textContent = t.lastUpdatedLabel;
+    document.getElementById("pp-h1").textContent = t.h1;
+    document.getElementById("pp-intro").textContent = t.introParagraph;
+    document.getElementById("pp-short").innerHTML = t.shortBoxText;
+    for (var i = 1; i <= 10; i++) {
+      document.getElementById("pp-h2-" + i).textContent = t["h2_" + i];
+      document.getElementById("pp-body-" + i).innerHTML = t["body_" + i];
+    }
+    document.getElementById("pp-footer-link").textContent = t.footerBackText;
+
+    var sw = document.getElementById("pp-langsw");
+    sw.innerHTML = "";
+    LANGS.forEach(function (c) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = LANG_NAMES[c];
+      btn.setAttribute("aria-pressed", c === code ? "true" : "false");
+      btn.addEventListener("click", function () {
+        setStoredLang(c);
+        render(c);
+      });
+      sw.appendChild(btn);
+    });
+  }
+
+  render(getStoredLang() || "en");
+})();
+</script>
 </body>
 </html>

@@ -346,7 +346,7 @@ class Component extends DCLogic {
  },
  "fr": {
   "contact": "Contact",
-  "cTitle2": "Prêts à faire de la place pour la vie ?",
+  "cTitle2": "Prêts à faire de la place pour la vie ?",
   "cSub": "Parlez-moi un peu de votre maison ou de votre futur déménagement. J'ai hâte de découvrir ce que vous avez en tête.",
   "lName": "Nom complet",
   "lEmail": "E-mail",
