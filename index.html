@@ -191,12 +191,12 @@
     <h2 class="h2 center reveal">{{ba.title}}</h2>
     <div class="ba-car reveal">
       <sc-if value="{{cur.single}}" hint-placeholder-val="{{ false }}">
-        <figure class="ba-fig ba-single"><img src="{{cur.b}}" alt="{{cur.alt}}"></figure>
+        <figure class="ba-fig ba-single"><button type="button" class="ba-zoom" aria-label="{{ba.expand}}" onClick="{{cur.clickB}}"><img src="{{cur.b}}" alt="{{cur.alt}}"></button></figure>
       </sc-if>
       <sc-if value="{{cur.pair}}" hint-placeholder-val="{{ true }}">
       <div class="ba-pair">
-        <figure class="ba-fig"><img src="{{cur.b}}" alt="{{cur.bl}} — {{cur.label}}"><figcaption class="{{cur.bCls}}">{{cur.bl}}</figcaption></figure>
-        <figure class="ba-fig"><img src="{{cur.a}}" alt="{{cur.al}} — {{cur.label}}"><figcaption class="ba-lbl ba-lbl-a">{{cur.al}}</figcaption></figure>
+        <figure class="ba-fig"><button type="button" class="ba-zoom" aria-label="{{ba.expand}}" onClick="{{cur.clickB}}"><img src="{{cur.b}}" alt="{{cur.bl}} — {{cur.label}}"></button><figcaption class="{{cur.bCls}}">{{cur.bl}}</figcaption></figure>
+        <figure class="ba-fig"><button type="button" class="ba-zoom" aria-label="{{ba.expand}}" onClick="{{cur.clickA}}"><img src="{{cur.a}}" alt="{{cur.al}} — {{cur.label}}"></button><figcaption class="ba-lbl ba-lbl-a">{{cur.al}}</figcaption></figure>
       </div>
       </sc-if>
       <div class="ba-bar">
@@ -354,6 +354,16 @@
     <div class="vmodal-box">
       <video src="assets/video/intro.mp4" poster="assets/video/intro-poster.jpg" controls="controls" autoplay="autoplay" playsinline="playsinline" preload="auto"></video>
       <button type="button" class="vmodal-x" aria-label="{{closeLbl}}" onClick="{{closeVideo}}"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{photoOpen}}" hint-placeholder-val="{{ false }}">
+  <div class="pmodal" role="dialog" aria-modal="true" aria-label="{{ba.title}}">
+    <button type="button" class="vmodal-bg" aria-label="{{closeLbl}}" onClick="{{closePhoto}}"></button>
+    <div class="pmodal-box">
+      <img src="{{photoOpen}}" alt="">
+      <button type="button" class="vmodal-x" aria-label="{{closeLbl}}" onClick="{{closePhoto}}"><svg class="i" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
     </div>
   </div>
 </sc-if>

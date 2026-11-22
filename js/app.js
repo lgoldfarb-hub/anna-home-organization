@@ -5,7 +5,7 @@ class Component extends DCLogic {
     super(props);
     var savedLang = null;
     try { savedLang = localStorage.getItem("anna_lang"); } catch (e) {}
-    this.state = { slide: 0, lang: savedLang, menuOpen: false, langOpen: false, videoOpen: false, compact: false, tab: "org",
+    this.state = { slide: 0, lang: savedLang, menuOpen: false, langOpen: false, videoOpen: false, photoOpen: null, compact: false, tab: "org",
       form: { name: "", email: "", phone: "", loc: "", service: "", msg: "", consent: false, hp: "" },
       errors: {}, status: null };
   }
@@ -512,8 +512,8 @@ class Component extends DCLogic {
         name: { en: "English", ru: "Русский", fr: "Français", pt: "Português" }[c],
         pick: function () { try { localStorage.setItem("anna_lang", c); } catch (e) {} self.setState({ lang: c, menuOpen: false, langOpen: false }); } };
     });
-    var BA = { en: ["Before & after", "Before", "After", "Previous", "Next", "Slide"], ru: ["До и после", "До", "После", "Назад", "Далее", "Слайд"],
-      fr: ["Avant / après", "Avant", "Après", "Précédent", "Suivant", "Diapositive"], pt: ["Antes e depois", "Antes", "Depois", "Anterior", "Seguinte", "Diapositivo"] }[code];
+    var BA = { en: ["Before & after", "Before", "After", "Previous", "Next", "Slide", "View full size"], ru: ["До и после", "До", "После", "Назад", "Далее", "Слайд", "Открыть на весь экран"],
+      fr: ["Avant / après", "Avant", "Après", "Précédent", "Suivant", "Diapositive", "Voir en taille réelle"], pt: ["Antes e depois", "Antes", "Depois", "Anterior", "Seguinte", "Diapositivo", "Ver em tamanho real"] }[code];
     var ids = ["services", "process", "results", "testimonials", "about", "contact"];
     var navL = [t.nav[0], t.nav[1], BA[0], t.nav[2], t.nav[3], t.contact];
     var slides = [
@@ -534,6 +534,8 @@ class Component extends DCLogic {
       label: sl.noLabel ? "" : (sl.custom ? sl.custom[code] : t.zones[sl.z]), alt: sl.custom ? sl.custom[code] : t.zones[sl.z],
       bl: sl.ready ? ORG : BA[1], al: sl.ready ? ORG : BA[2],
       bCls: sl.ready ? "ba-lbl ba-lbl-a" : "ba-lbl" };
+    cur.clickB = function () { self.setState({ photoOpen: cur.b }); };
+    cur.clickA = function () { self.setState({ photoOpen: cur.a }); };
     var baDots = slides.map(function (x, i) { return { label: BA[5] + " " + (i + 1), on: i === si ? "true" : "false", go: function () { self.setState({ slide: i }); } }; });
     var nav = ids.map(function (id, i) { return { href: "#" + id, label: navL[i] }; });
     var tones = ["#F4F1EC", "#D6DBD0", "#E8D8CD", "#D6DBD0", "#E8D8CD", "#F4F1EC", "#E8D8CD", "#F4F1EC", "#D6DBD0"];
@@ -577,13 +579,15 @@ class Component extends DCLogic {
       pt: ["Não foi possível enviar o formulário automaticamente.", "Enviar por e-mail →"] }[code] || [];
     return {
       t: t, reqTip: reqTip, langs: langs, whyTitleBr: code === "en", heroH1Cls: "hero-h1-" + code,
-      ba: { title: BA[0], before: BA[1], after: BA[2], prev: BA[3], next: BA[4] }, cur: cur, baDots: baDots, baTotal: slides.length,
+      ba: { title: BA[0], before: BA[1], after: BA[2], prev: BA[3], next: BA[4], expand: BA[6] }, cur: cur, baDots: baDots, baTotal: slides.length,
       baPrev: function () { self.setState({ slide: si - 1 }); }, baNext: function () { self.setState({ slide: si + 1 }); },
       langOpen: s.langOpen, langExp: s.langOpen ? "true" : "false",
       curCode: code.toUpperCase(), curName: { en: "English", ru: "Русский", fr: "Français", pt: "Português" }[code],
       videoOpen: s.videoOpen,
       openVideo: function () { self.setState({ videoOpen: true }); },
       closeVideo: function () { self.setState({ videoOpen: false }); },
+      photoOpen: s.photoOpen,
+      closePhoto: function () { self.setState({ photoOpen: null }); },
       closeLbl: { en: "Close", ru: "Закрыть", fr: "Fermer", pt: "Fechar" }[code],
       toggleLang: function () { self.setState({ langOpen: !self.state.langOpen }); }, nav: nav, zones: zones, movSteps: movSteps,
       hdrCls: s.compact ? "compact" : "",
