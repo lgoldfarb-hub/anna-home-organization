@@ -523,7 +523,7 @@ class Component extends DCLogic {
       { b: "assets/images/before-after/05-medicine-drawer-before.jpg", a: "assets/images/before-after/05-medicine-drawer-after.jpg", custom: { en: "Medicine drawer", ru: "Аптечка", fr: "Tiroir à pharmacie", pt: "Gaveta de medicamentos" } },
       { b: "assets/images/before-after/06-bookshelf-closeup-before.jpg", a: "assets/images/before-after/06-bookshelf-closeup-after.jpg", z: 2 },
       { b: "assets/images/before-after/07-organized-wardrobe-1.jpg", a: "assets/images/before-after/07-organized-wardrobe-2.jpg", ready: true,
-        custom: { en: "Move into this. Not boxes.", ru: "Сразу так. Без сотни коробок.", fr: "Emménagez ici. Pas dans des cartons.", pt: "Mude-se para isto. Não para caixas." } },
+        custom: { en: "Move into this. Not boxes.", ru: "Ваш комфортный гардероб с первого дня. И без сотни коробок.", fr: "Emménagez ici. Pas dans des cartons.", pt: "Mude-se para isto. Não para caixas." } },
       { b: "assets/images/before-after/08-pollock-to-mondrian.jpg", single: true,
         custom: { en: "Turn your Jackson Pollock into Piet Mondrian.", ru: "Превратите своего Джексона Поллока в Пита Мондриана.", fr: "Transformez votre Jackson Pollock en Piet Mondrian.", pt: "Transforme o seu Jackson Pollock num Piet Mondrian." },
         shortLabel: { en: "Living room", ru: "Гостиная", fr: "Salon", pt: "Sala de estar" } }
