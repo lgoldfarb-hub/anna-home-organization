@@ -59,7 +59,7 @@ class Component extends DCLogic {
         igLine: "View my Instagram for more pics and videos of how I do my job.",
         about: "About me",
         aboutP: [
-          "My name is Anna. I was born in Moscow, Russia, and have lived in the USA, Canada, Israel, Brazil, Spain and Portugal.",
+          "My name is Anna Goldfarb. I was born in Moscow, Russia, and have lived in the USA, Canada, Israel, Brazil, Spain and Portugal.",
           "I used to work as a Russian-English simultaneous interpreter and an international theatre producer. After moving homes and countries many times, I decided to turn my passion for homes and organization into my new vocation.",
           "As a wife and a mother, my mission is to take the mental load off my clients' shoulders and help them invest in a more peaceful, aesthetic and clutter-free life at home."
         ],
