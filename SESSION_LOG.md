@@ -4,6 +4,41 @@ Running log of changes made to this project, session by session. Newest entries 
 
 ---
 
+## 2026-11-22 (continued)
+
+**Deployment**
+- Installed Netlify CLI, logged in, created the `annabubel` Netlify site, deployed to production.
+- Purchased domain `annabubel.com`; connected it via Netlify DNS as the primary domain (+ `www` redirect), fixed a team-wide "Private" visitor-access default that was returning 401 on every page.
+- Reconnected the Netlify site from its internal git mirror to the real GitHub repo (`lgoldfarb-hub/anna-home-organization`, branch `main`) so pushes auto-deploy to production.
+
+**Contact form**
+- FormSubmit was silently failing every real submission ("This form needs Activation", confirmed by testing its API directly). Migrated the form to **Netlify Forms**: added a hidden static `<form name="contact" data-netlify="true">` right after `<body>` so Netlify's build-time parser detects it, and `submit()` in `js/app.js` now POSTs urlencoded data to `/` instead of calling FormSubmit's API.
+- Had to flip the site's "ignore_html_forms" processing setting off (via Forms page → Form detection) and trigger a fresh deploy before Netlify actually registered the form.
+- Set up an email notification (Forms → Add notification) so every submission emails `anna.b.goldfarb@gmail.com`; confirmed via the confirmation-link email Netlify sends. Verified end-to-end with real test submissions (cleaned up afterward).
+- `cfg.formEndpoint` (FormSubmit) removed from `config()` in `js/app.js` since it's no longer used.
+
+**Copy edits**
+- EN "About me": "My name is Anna." → "My name is Anna Goldfarb."
+- RU "Why" heading: "Организатора пространства приглашают, когда хочется" → "Организатор пространства нужен, когда хочется" (grammar fix after first attempt).
+- RU "watch video" button: shortened to "Мини видео обо мне".
+- RU "extra services" line and "how it works" step 5 and steps 8–9: wording tweaks (added detail about traveling for projects, added emoji/exclamation).
+- FR contact heading: added a non-breaking space before "?" so it doesn't wrap onto its own line.
+
+**Layout / responsive fixes**
+- Hero heading (`hero-h1`): was wrapping mid-sentence in RU/FR/PT on both mobile and desktop. Fixed properly by **measuring real rendered text with headless Chrome** (`make_measure_page.py` script that injects a measurement readout into a test copy of the page) instead of guessing font-sizes. Ended up with **per-language font-size classes** (`hero-h1-en/ru/fr/pt`) each tuned to its own measured safe maximum: EN 85px, PT 64px, FR 60px, RU 48px (desktop ceilings), each maximized further per request ("as large as possible without wrapping").
+- Widened the hero text column (`1.3fr` vs `1fr`) to give longer translations more room.
+- "Why" section heading: the forced `<br>` between its two halves only make sense for English now (`whyTitleBr: code === "en"`) — RU/FR/PT wrap naturally into the 2 lines they need.
+- Fixed several oversized section-to-section gaps caused by two adjacent sections' CSS paddings stacking (hero → Why, Why cards → Services, Testimonials' own padding) — reduced to intentional-looking spacing in each case.
+- Before/after slider: removed "Kids' room" slide 3; moved before/after labels to the bottom of each photo with a semi-transparent blurred background and rounded corners (also added to the photo frames themselves).
+
+**Privacy policy**
+- Rebuilt `privacy.html` as a fully self-contained templated page (own JS, no dependency on the main site's renderer) with real EN/RU/FR/PT translations and its own language switcher, defaulting to the visitor's `anna_lang` localStorage value (falls back to English). Main site now also persists the chosen language to `localStorage` on every pick, read back on load.
+
+**Housekeeping**
+- A diagnostic headless-Chrome testing workflow (`make_measure_page.py` + screenshot comparisons) was built in the scratchpad for the hero font-size work and could be reused for future "does this text fit" questions.
+
+---
+
 ## 2026-11-22
 
 **Project setup**
