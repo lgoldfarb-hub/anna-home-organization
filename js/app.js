@@ -523,7 +523,8 @@ class Component extends DCLogic {
       { b: "assets/images/before-after/05-medicine-drawer-before.jpg", a: "assets/images/before-after/05-medicine-drawer-after.jpg", custom: { en: "Medicine drawer", ru: "Аптечка", fr: "Tiroir à pharmacie", pt: "Gaveta de medicamentos" } },
       { b: "assets/images/before-after/06-bookshelf-closeup-before.jpg", a: "assets/images/before-after/06-bookshelf-closeup-after.jpg", z: 2 },
       { b: "assets/images/before-after/07-organized-wardrobe-1.jpg", a: "assets/images/before-after/07-organized-wardrobe-2.jpg", ready: true,
-        custom: { en: "Move into this. Not boxes.", ru: "Ваш комфортный гардероб с первого дня. И без сотни коробок.", fr: "Emménagez ici. Pas dans des cartons.", pt: "Mude-se para isto. Não para caixas." } },
+        custom: { en: "Move into this. Not boxes.", ru: "Ваш комфортный гардероб с первого дня. И без сотни коробок.", fr: "Emménagez ici. Pas dans des cartons.", pt: "Mude-se para isto. Não para caixas." },
+        labelBreak: { ru: ["Ваш комфортный гардероб", "с первого дня. И без сотни коробок."] } },
       { b: "assets/images/before-after/08-pollock-to-mondrian.jpg", single: true,
         custom: { en: "Turn your Jackson Pollock into Piet Mondrian.", ru: "Превратите своего Джексона Поллока в Пита Мондриана.", fr: "Transformez votre Jackson Pollock en Piet Mondrian.", pt: "Transforme o seu Jackson Pollock num Piet Mondrian." },
         shortLabel: { en: "Living room", ru: "Гостиная", fr: "Salon", pt: "Sala de estar" } }
@@ -531,8 +532,11 @@ class Component extends DCLogic {
     var ORG = { en: "Organized by Anna from day one during the move", ru: "Организовано Анной с первого дня переезда", fr: "Organisé par Anna dès le premier jour du déménagement", pt: "Organizado pela Anna desde o primeiro dia da mudança" }[code];
     var si = ((s.slide % slides.length) + slides.length) % slides.length;
     var sl = slides[si];
+    var fullLabel = sl.shortLabel ? sl.shortLabel[code] : (sl.custom ? sl.custom[code] : t.zones[sl.z]);
+    var labelParts = sl.labelBreak && sl.labelBreak[code] ? sl.labelBreak[code] : [fullLabel, ""];
     var cur = { b: sl.b, a: sl.a || sl.b, n: si + 1, single: !!sl.single, pair: !sl.single,
-      label: sl.shortLabel ? sl.shortLabel[code] : (sl.custom ? sl.custom[code] : t.zones[sl.z]), alt: sl.custom ? sl.custom[code] : t.zones[sl.z],
+      label: fullLabel, labelA: labelParts[0], labelB: labelParts[1],
+      alt: sl.custom ? sl.custom[code] : t.zones[sl.z],
       bl: sl.ready ? ORG : BA[1], al: sl.ready ? ORG : BA[2],
       bCls: sl.ready ? "ba-lbl ba-lbl-a" : "ba-lbl" };
     cur.clickB = function () { self.setState({ photoOpen: cur.b }); };
