@@ -201,6 +201,51 @@ class Component extends DCLogic {
         ],
         closing: "Contacte-me já!",
         regards: "Com os melhores cumprimentos,"
+      },
+      es: {
+        nav: ["Servicios", "Cómo funciona", "Testimonios", "Sobre mí"], role: "Organizadora profesional de espacios",
+        h1l1: "Menos desorden.", h1l2: "Menos carga mental.", h1b: "Más espacio", h1c: "para vivir.",
+        subA: "Organización del hogar ", subB: "y soluciones de almacenaje", subC: " pensadas con cuidado, en Portugal y en todo el mundo.",
+        cta: "Reservar una consulta gratuita", watch: "Vea un breve vídeo sobre mí",
+        whyTitleA: "Se recurre a una organizadora de espacios", whyTitleB: "cuando se quiere",
+        why1a: "tener por fin una cocina, una habitación infantil, un despacho, etc. ", why1b: "bien organizados, sin trastos,", why1c: " ordenados y estéticamente cuidados",
+        why2a: "", why2b: "ahorrar tiempo y energía", why2c: " confiando en ayuda profesional, en lugar de inventar un sistema nuevo desde cero",
+        why3a: "mudarse a un nuevo hogar y llegar ", why3b: "a una casa lista para vivir,", why3c: " sin tener que vivir entre cajas",
+        svc: "Servicios", org: "Organización", mov: "Mudanza",
+        zones: ["Cocina", "Armarios", "Habitación infantil", "Baño", "Trastero", "Despacho y documentos", "Garaje", "Frigorífico", "Etc."],
+        price: "200 € por espacio", movPrice: "desde 1000 €",
+        priceNote: "Los contenedores de almacenaje se pagan por separado.",
+        extra: "Además, si está construyendo la casa de sus sueños, puede encargarme el proyecto de un nuevo armario inteligente o la distribución de la cocina.",
+        how: "Cómo funciona", howCta: "Hablemos de su proyecto",
+        o1: "Se pone en contacto conmigo.",
+        o2: "Organizamos una primera visita de 10 minutos, durante la cual:",
+        o2list: ["averiguo cuántas cosas tiene", "veo cuánto espacio de almacenaje hay disponible", "identifico qué estilo de organizadores y decoración encaja estéticamente con su espacio", "tomo medidas", "aclaramos juntos nuestros objetivos"],
+        o2note: "(Si vive en el extranjero, podemos organizarlo online.)",
+        o3: "Fijamos una fecha en la que pueda estar en casa y, si hace falta, compro los organizadores.",
+        o4: "El día acordado, me pongo manos a la obra. El proceso se hace por fases: evaluación, descarte, categorización, reorganización.",
+        o5: "Mientras hago mi magia, le iré haciendo preguntas sobre sus preferencias, hábitos y rutinas. No tiene que hacer nada en la práctica, pero necesito consultarle de vez en cuando.",
+        o6: "Creamos un sistema basado en sus hábitos y en mi conocimiento profesional. Coloco todo en su sitio y etiqueto todos los organizadores.",
+        o7: "Termino con un recorrido por su nuevo armario o cocina, y le dejo trucos y recomendaciones para mantener el sistema a partir de ahora. (Seguro que será mucho más fácil que antes.)",
+        o8: "Todos contentos. 😊 Le pido un testimonio y grabo un reel de nuestro proyecto.",
+        o9: "¡Voilà!",
+        mIntro: "En un proyecto de mudanza hay que tener en cuenta algunos factores más. Idealmente, ocurre así:",
+        mSteps: [
+          "Me escribe con las fechas de su mudanza.",
+          "Usted o yo compramos suficientes cajas y film de embalar.",
+          { a: "Voy a su casa a embalar con antelación. Lo ideal es que toda la clasificación y el descarte (las tres primeras fases) tengan lugar en su casa antigua. ", b: "Así nada innecesario viaja a su nueva vida." },
+          "El siguiente encuentro es ya en su nuevo hogar. Llevo los organizadores y planifico una nueva disposición para sus pertenencias.",
+          "Todo el proyecto puede durar varios días. Usted llega sin preocupaciones, sin tener que vivir entre cajas ni tomar decisiones precipitadas sobre dónde poner todo. De forma inteligente, ahorrando tiempo y energía."
+        ],
+        testi: "Testimonios",
+        igLine: "Visite mi Instagram para ver más fotos y vídeos de cómo trabajo.",
+        about: "Sobre mí",
+        aboutP: [
+          "Me llamo Anna Goldfarb. Nací en Moscú, Rusia, y he vivido en Estados Unidos, Canadá, Israel, Brasil, España y Portugal.",
+          "Antes trabajaba como intérprete simultánea de ruso-inglés y productora internacional de teatro. Tras mudarme de casa y de país muchas veces, decidí convertir mi pasión por el hogar y la organización en mi nueva vocación.",
+          "Como esposa y madre, mi misión es quitar la carga mental de los hombros de mis clientes y ayudarles a invertir en una vida en casa más tranquila, estética y libre de trastos."
+        ],
+        closing: "¡Póngase en contacto conmigo ahora mismo!",
+        regards: "Un cordial saludo,"
       }
     };
     return this._T;
@@ -440,6 +485,55 @@ class Component extends DCLogic {
   },
   "privacy": "Política de Privacidade",
   "privacyNote": "Política de Privacidade — texto provisório. A versão completa será acrescentada antes do lançamento."
+ },
+ "es": {
+  "contact": "Contacto",
+  "cTitle2": "¿Lista para hacer sitio para la vida?",
+  "cSub": "Cuénteme un poco sobre su casa o su próxima mudanza. Me encantaría saber qué tiene en mente. :)",
+  "lName": "Nombre completo",
+  "lEmail": "Email",
+  "lPhone": "WhatsApp / número de teléfono (opcional)",
+  "lLoc": "Ciudad o país",
+  "lService": "Servicio que necesita",
+  "lChoose": "Elegir…",
+  "svcOpts": [
+   "Organización del hogar",
+   "Mudanza",
+   "Planificación de almacenaje",
+   "Aún no lo sé"
+  ],
+  "lMsg": "Cuénteme sobre su proyecto",
+  "consentA": "Acepto que Anna utilice mis datos para responder a mi consulta. Ver la",
+  "consentLink": "Política de Privacidad",
+  "consentB": ".",
+  "submit": "Enviar",
+  "errReq": "Por favor, rellene este campo.",
+  "errEmail": "Introduzca una dirección de email válida.",
+  "errConsent": "Marque esta casilla para continuar.",
+  "errBanner": "Rellene todos los campos obligatorios marcados con *.",
+  "preview": "Todo está correcto. Modo de vista previa: aún no hay un envío conectado, así que no se ha enviado nada.",
+  "sending": "Enviando…",
+  "sent": "¡Gracias! Su mensaje va de camino — me pondré en contacto con usted pronto.",
+  "failed": "Algo salió mal y su mensaje no se envió. Por favor, inténtelo de nuevo en un momento.",
+  "opts": {
+   "wa": [
+    "WhatsApp",
+    "Escríbame por WhatsApp",
+    "[Número de WhatsApp por añadir]"
+   ],
+   "ig": [
+    "Instagram",
+    "Sígame en Instagram",
+    "[Enlace de Instagram por añadir]"
+   ],
+   "em": [
+    "Email",
+    "Escríbame un email",
+    "[Dirección de email por añadir]"
+   ]
+  },
+  "privacy": "Política de Privacidad",
+  "privacyNote": "Política de Privacidad — texto provisional. El texto completo se añadirá antes del lanzamiento."
  }
 }; }
 
@@ -504,32 +598,33 @@ class Component extends DCLogic {
     var code = s.lang || this.props.startLang || "en";
     var T = this.i18n();
     var t = Object.assign({}, T[code] || T.en, this.formI18n()[code] || this.formI18n().en);
-    var reqTip = { en: "Required field", ru: "Обязательное поле", fr: "Champ obligatoire", pt: "Campo obrigatório" }[code] || "Required field";
+    var reqTip = { en: "Required field", ru: "Обязательное поле", fr: "Champ obligatoire", pt: "Campo obrigatório", es: "Campo obligatorio" }[code] || "Required field";
     var cfg = this.config();
 
-    var langs = ["en", "ru", "fr", "pt"].map(function (c) {
+    var langs = ["en", "ru", "fr", "pt", "es"].map(function (c) {
       return { code: c.toUpperCase(), lc: c === "pt" ? "pt-PT" : c, pressed: c === code ? "true" : "false",
-        name: { en: "English", ru: "Русский", fr: "Français", pt: "Português" }[c],
+        name: { en: "English", ru: "Русский", fr: "Français", pt: "Português", es: "Español" }[c],
         pick: function () { try { localStorage.setItem("anna_lang", c); } catch (e) {} self.setState({ lang: c, menuOpen: false, langOpen: false }); } };
     });
     var BA = { en: ["Before & after", "Before", "After", "Previous", "Next", "Slide", "View full size"], ru: ["До и после", "До", "После", "Назад", "Далее", "Слайд", "Открыть на весь экран"],
-      fr: ["Avant / après", "Avant", "Après", "Précédent", "Suivant", "Diapositive", "Voir en taille réelle"], pt: ["Antes e depois", "Antes", "Depois", "Anterior", "Seguinte", "Diapositivo", "Ver em tamanho real"] }[code];
+      fr: ["Avant / après", "Avant", "Après", "Précédent", "Suivant", "Diapositive", "Voir en taille réelle"], pt: ["Antes e depois", "Antes", "Depois", "Anterior", "Seguinte", "Diapositivo", "Ver em tamanho real"],
+      es: ["Antes y después", "Antes", "Después", "Anterior", "Siguiente", "Diapositiva", "Ver en tamaño completo"] }[code];
     var ids = ["services", "process", "results", "testimonials", "about", "contact"];
     var navL = [t.nav[0], t.nav[1], BA[0], t.nav[2], t.nav[3], t.contact];
     var slides = [
       { b: "assets/images/before-after/01-kids-wardrobe-before.jpg", a: "assets/images/before-after/01-kids-wardrobe-after.jpg", z: 1 },
       { b: "assets/images/before-after/02-shoe-closet-before.jpg", a: "assets/images/before-after/02-shoe-closet-after.jpg", z: 1 },
       { b: "assets/images/before-after/04-coffee-corner-before.jpg", a: "assets/images/before-after/04-coffee-corner-after.jpg", z: 0 },
-      { b: "assets/images/before-after/05-medicine-drawer-before.jpg", a: "assets/images/before-after/05-medicine-drawer-after.jpg", custom: { en: "Medicine drawer", ru: "Аптечка", fr: "Tiroir à pharmacie", pt: "Gaveta de medicamentos" } },
+      { b: "assets/images/before-after/05-medicine-drawer-before.jpg", a: "assets/images/before-after/05-medicine-drawer-after.jpg", custom: { en: "Medicine drawer", ru: "Аптечка", fr: "Tiroir à pharmacie", pt: "Gaveta de medicamentos", es: "Botiquín" } },
       { b: "assets/images/before-after/06-bookshelf-closeup-before.jpg", a: "assets/images/before-after/06-bookshelf-closeup-after.jpg", z: 2 },
       { b: "assets/images/before-after/07-organized-wardrobe-1.jpg", a: "assets/images/before-after/07-organized-wardrobe-2.jpg", ready: true,
-        custom: { en: "Move into this. Not boxes.", ru: "Ваш комфортный гардероб с первого дня. И без сотни коробок.", fr: "Emménagez ici. Pas dans des cartons.", pt: "Mude-se para isto. Não para caixas." },
+        custom: { en: "Move into this. Not boxes.", ru: "Ваш комфортный гардероб с первого дня. И без сотни коробок.", fr: "Emménagez ici. Pas dans des cartons.", pt: "Mude-se para isto. Não para caixas.", es: "Su armario cómodo desde el primer día. Y sin cien cajas." },
         labelBreak: { ru: ["Ваш комфортный гардероб", "с первого дня. И без сотни коробок."] } },
       { b: "assets/images/before-after/08-pollock-to-mondrian.jpg", single: true,
-        custom: { en: "Turn your Jackson Pollock into Piet Mondrian.", ru: "Превратите своего Джексона Поллока в Пита Мондриана.", fr: "Transformez votre Jackson Pollock en Piet Mondrian.", pt: "Transforme o seu Jackson Pollock num Piet Mondrian." },
-        shortLabel: { en: "Bonus :)", ru: "Бонус :)", fr: "Bonus :)", pt: "Bónus :)" } }
+        custom: { en: "Turn your Jackson Pollock into Piet Mondrian.", ru: "Превратите своего Джексона Поллока в Пита Мондриана.", fr: "Transformez votre Jackson Pollock en Piet Mondrian.", pt: "Transforme o seu Jackson Pollock num Piet Mondrian.", es: "Convierta su Jackson Pollock en un Piet Mondrian." },
+        shortLabel: { en: "Bonus :)", ru: "Бонус :)", fr: "Bonus :)", pt: "Bónus :)", es: "Bonus :)" } }
     ];
-    var ORG = { en: "Organized by Anna from day one during the move", ru: "Организовано Анной с первого дня переезда", fr: "Organisé par Anna dès le premier jour du déménagement", pt: "Organizado pela Anna desde o primeiro dia da mudança" }[code];
+    var ORG = { en: "Organized by Anna from day one during the move", ru: "Организовано Анной с первого дня переезда", fr: "Organisé par Anna dès le premier jour du déménagement", pt: "Organizado pela Anna desde o primeiro dia da mudança", es: "Organizado por Anna desde el primer día de la mudanza" }[code];
     var si = ((s.slide % slides.length) + slides.length) % slides.length;
     var sl = slides[si];
     var fullLabel = sl.shortLabel ? sl.shortLabel[code] : (sl.custom ? sl.custom[code] : t.zones[sl.z]);
@@ -550,8 +645,8 @@ class Component extends DCLogic {
       return typeof m === "string" ? { n: String(i + 1), text: m, bold: "" } : { n: String(i + 1), text: m.a, bold: m.b };
     });
 
-    var copyLbl = { en: "Copy", ru: "Скопировать", fr: "Copier", pt: "Copiar" }[code] || "Copy";
-    var copiedLbl = { en: "Copied!", ru: "Скопировано!", fr: "Copié !", pt: "Copiado!" }[code] || "Copied!";
+    var copyLbl = { en: "Copy", ru: "Скопировать", fr: "Copier", pt: "Copiar", es: "Copiar" }[code] || "Copy";
+    var copiedLbl = { en: "Copied!", ru: "Скопировано!", fr: "Copié !", pt: "Copiado!", es: "¡Copiado!" }[code] || "Copied!";
     var waHref = cfg.whatsapp ? "https://wa.me/" + cfg.whatsapp.replace(/\D/g, "") : "";
     var ctaHref = waHref || (cfg.email ? "mailto:" + cfg.email : "");
     var opts = [
@@ -560,7 +655,7 @@ class Component extends DCLogic {
       { k: "tg", href: cfg.telegram ? "https://t.me/" + cfg.telegram : "", target: "_blank" },
       { k: "em", href: cfg.email ? "mailto:" + cfg.email : "", target: "_blank" }
     ].map(function (o) {
-      var tgT = { en: "Telegram me", ru: "Напишите мне в Telegram", fr: "Écrivez-moi sur Telegram", pt: "Fale comigo no Telegram" };
+      var tgT = { en: "Telegram me", ru: "Напишите мне в Telegram", fr: "Écrivez-moi sur Telegram", pt: "Fale comigo no Telegram", es: "Escríbame por Telegram" };
       var tx = o.k === "tg" ? ["Telegram", tgT[code] || tgT.en, ""] : t.opts[o.k];
       var dVal = o.k === "em" ? cfg.email : o.k === "wa" ? cfg.whatsappDisplay : o.k === "tg" ? cfg.telegramHandle : cfg.instagramHandle;
       var canCopy = o.k === "em" || o.k === "wa" || o.k === "tg";
@@ -596,20 +691,21 @@ class Component extends DCLogic {
     var fb = { en: ["The form couldn't be sent automatically.", "Send it by email instead →"],
       ru: ["Не удалось отправить форму автоматически.", "Отправить по email →"],
       fr: ["Le formulaire n'a pas pu être envoyé automatiquement.", "L'envoyer par e-mail →"],
-      pt: ["Não foi possível enviar o formulário automaticamente.", "Enviar por e-mail →"] }[code] || [];
+      pt: ["Não foi possível enviar o formulário automaticamente.", "Enviar por e-mail →"],
+      es: ["El formulario no se pudo enviar automáticamente.", "Enviarlo por email en su lugar →"] }[code] || [];
     return {
       t: t, reqTip: reqTip, langs: langs, whyTitleBr: code === "en", heroH1Cls: "hero-h1-" + code,
       ba: { title: BA[0], before: BA[1], after: BA[2], prev: BA[3], next: BA[4], expand: BA[6] }, cur: cur, baDots: baDots, baTotal: slides.length,
       barSingleCls: cur.single ? "ba-bar-single" : "",
       baPrev: function () { self.setState({ slide: si - 1 }); }, baNext: function () { self.setState({ slide: si + 1 }); },
       langOpen: s.langOpen, langExp: s.langOpen ? "true" : "false",
-      curCode: code.toUpperCase(), curName: { en: "English", ru: "Русский", fr: "Français", pt: "Português" }[code],
+      curCode: code.toUpperCase(), curName: { en: "English", ru: "Русский", fr: "Français", pt: "Português", es: "Español" }[code],
       videoOpen: s.videoOpen,
       openVideo: function () { self.setState({ videoOpen: true }); },
       closeVideo: function () { self.setState({ videoOpen: false }); },
       photoOpen: s.photoOpen,
       closePhoto: function () { self.setState({ photoOpen: null }); },
-      closeLbl: { en: "Close", ru: "Закрыть", fr: "Fermer", pt: "Fechar" }[code],
+      closeLbl: { en: "Close", ru: "Закрыть", fr: "Fermer", pt: "Fechar", es: "Cerrar" }[code],
       toggleLang: function () { self.setState({ langOpen: !self.state.langOpen }); }, nav: nav, zones: zones, movSteps: movSteps,
       hdrCls: s.compact ? "compact" : "",
       menuOpen: s.menuOpen, menuClosed: !s.menuOpen, menuExp: s.menuOpen ? "true" : "false",
